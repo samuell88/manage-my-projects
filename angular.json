@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "manage-my-projects"
+    }
+  },
+  "defaultProject": "manage-my-projects",
+  "cli": {
+    "analytics": false
+  }
 }
