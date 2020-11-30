@@ -1,3 +1,14 @@
 <h2>{{project.name | uppercase}} Details</h2>
 <div><span>id: </span>{{project.id}}</div>
 <div><span>name: </span>{{project.name}}</div>
+
+<h2>Mes projets</h2>
+<ul class="projects">
+  <li *ngFor="let project of projects"
+      [class.selected]="project === selectedProject"
+      (click)="onSelect(project)">
+    <span class="badge">{{project.id}}</span> {{project.name}}
+  </li>
+</ul>
+
+<app-project-detail [project]="selectedProject"></app-project-detail>
